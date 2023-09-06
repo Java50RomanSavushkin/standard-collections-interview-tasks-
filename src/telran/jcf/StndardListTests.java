@@ -1,10 +1,14 @@
 package telran.jcf;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
+
+import java.util.ConcurrentModificationException;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import java.util.*;
 
 class StndardListTests {
 
@@ -37,7 +41,7 @@ class StndardListTests {
 		sublist2.remove(0);
 //		sublist2.add(0, 20);
 	//	linkedList.add(0, 10);
-		Integer [] expected4 = {10, -5, 100, 13,   10};
+		//Integer [] expected4 = {10, -5, 100, 13,   10};
 		Integer [] expected5 = { 10};
 		assertArrayEquals(expected5, sublist2.toArray(Integer[]::new));
 		assertThrowsExactly(ConcurrentModificationException.class, () ->subList1.toArray(Integer[]::new));
