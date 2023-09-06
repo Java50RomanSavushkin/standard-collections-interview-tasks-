@@ -1,7 +1,6 @@
 package telran.interviews;
 
-import java.util.Comparator;
-import java.util.LinkedList;
+import java.util.*;
 //Requirement: all methods must have complexity O[1]
 public class MyStack<T> {
 	LinkedList<T> values = new LinkedList<>();
@@ -23,7 +22,7 @@ public class MyStack<T> {
 	  
   }
   public T pop() {
-	  //removes the stack's top element and returns it out
+	  //TODO removes the stack's top element and returns it out
 	  //In the case no elements exist in the stack the method throws exception NoSuchElementException
 	  T element = values.removeLast();
 	  if (comp.compare(element, maxValues.getLast()) == 0) {
@@ -36,7 +35,7 @@ public class MyStack<T> {
 	  return values.isEmpty();
   }
   public T getMax() {
-	  //returns maximal element from the stack
+	  //TODO returns maximal element from the stack
 	  //In the case no elements exist in the stack the method throws exception NoSuchElementException
 	  return maxValues.getLast();
   }
