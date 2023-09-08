@@ -23,7 +23,7 @@ public class MyStack<T> {
 	  
   }
   public T pop() {
-	  //TODO removes the stack's top element and returns it out
+	  // removes the stack's top element and returns it out
 	  //In the case no elements exist in the stack the method throws exception NoSuchElementException
 	  T element = values.removeLast();
 	  if (comp.compare(element, maxValues.getLast()) == 0) {
